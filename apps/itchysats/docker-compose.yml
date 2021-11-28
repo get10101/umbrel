@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  web:
+    # TODO: get latest release from https://github.com/itchysats/itchysats/pkgs/container/itchysats%2Ftaker
+    image: docker pull ghcr.io/itchysats/itchysats/taker:latest@sha256:dba750409d9446ba34ac5682a9bb7f44b9084f506d1971203773e01ba282c361
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - ${APP_ITCHYSATS_PORT}:8000
+    volumes:
+      - ${APP_DATA_DIR}/data/itchysats:/data
+    command:
+      - --maker=mainnet.itchysats.network:9999
+      - --maker-id=69a42aa90da8b065b9532b62bff940a3ba07dbbb11d4482c7db83a7e049a9f1e
+      - mainnet
+      - --electrum tcp://$ELECTRUM_IP:$ELECTRUM_PORT
+    
+    networks:
+      default:
+        ipv4_address: $APP_ITCHYSATS_IP
+
+
+
