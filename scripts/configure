@@ -147,7 +147,6 @@ APP_SPHINX_RELAY_PORT="3300"
 APP_RIDE_THE_LIGHTNING_IP="10.21.21.15"
 APP_RIDE_THE_LIGHTNING_PORT="3001"
 APP_RIDE_THE_LIGHTNING_LOOP_IP="10.21.21.16"
-APP_RIDE_THE_LIGHTNING_BOLTZ_IP="10.21.21.63"
 APP_LIGHTNING_TERMINAL_IP="10.21.21.17"
 APP_LIGHTNING_TERMINAL_PORT="3004"
 APP_SPECTER_DESKTOP_IP="10.21.21.18"
@@ -221,6 +220,8 @@ APP_UPTIME_KUMA_PORT="8385"
 APP_UPTIME_KUMA_IP="10.21.21.62"
 APP_HELIPAD_PORT="2112"
 APP_HELIPAD_IP="10.21.21.65"
+APP_ITCHYSATS_IP="10.21.21.64"
+APP_ITCHYSATS_PORT="7113"
 
 # Generate RPC credentials
 if [[ -z ${BITCOIN_RPC_USER+x} ]] || [[ -z ${BITCOIN_RPC_PASS+x} ]] || [[ -z ${BITCOIN_RPC_AUTH+x} ]]; then
@@ -439,6 +440,8 @@ for template in "${NGINX_CONF_FILE}" "${BITCOIN_CONF_FILE}" "${LND_CONF_FILE}" "
   sed -i "s/<app-uptime-kuma-ip>/${APP_UPTIME_KUMA_IP}/g" "${template}"
   sed -i "s/<app-helipad-port>/${APP_HELIPAD_PORT}/g" "${template}"
   sed -i "s/<app-helipad-ip>/${APP_HELIPAD_IP}/g" "${template}"
+  sed -i "s/<app-itchysats-ip>/${APP_ITCHYSATS_IP}/g" "${template}"
+  sed -i "s/<app-itchysats-port>/${APP_ITCHYSATS_PORT}/g" "${template}"
 done
 
 ##########################################################
