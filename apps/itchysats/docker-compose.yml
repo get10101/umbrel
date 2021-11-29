@@ -9,7 +9,7 @@ services:
     ports:
       - ${APP_ITCHYSATS_PORT}:8000
     volumes:
-      - ${APP_DATA_DIR}/data/itchysats:/data
+      - ${APP_DATA_DIR}/data:/data
     command:
       - --maker=mainnet.itchysats.network:9999
       - --maker-id=69a42aa90da8b065b9532b62bff940a3ba07dbbb11d4482c7db83a7e049a9f1e
