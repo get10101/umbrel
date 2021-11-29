@@ -3,7 +3,7 @@ version: "3.7"
 services:
   web:
     # TODO: get latest release from https://github.com/itchysats/itchysats/pkgs/container/itchysats%2Ftaker
-    image: docker pull ghcr.io/itchysats/itchysats/taker:latest@sha256:dba750409d9446ba34ac5682a9bb7f44b9084f506d1971203773e01ba282c361
+    image: ghcr.io/itchysats/itchysats/taker:latest@sha256:dba750409d9446ba34ac5682a9bb7f44b9084f506d1971203773e01ba282c361
     restart: on-failure
     stop_grace_period: 1m
     ports:
