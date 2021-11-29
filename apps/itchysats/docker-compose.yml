@@ -12,7 +12,7 @@ services:
       - ${APP_DATA_DIR}/data:/data
     command:
       - --maker=mainnet.itchysats.network:9999
-      - --maker-id=69a42aa90da8b065b9532b62bff940a3ba07dbbb11d4482c7db83a7e049a9f1e
+      - --maker-id=7e35e34801e766a6a29ecb9e22810ea4e3476c2b37bf75882edf94a68b1d9607
       - mainnet
       - --electrum=tcp://$ELECTRUM_IP:$ELECTRUM_PORT
     
