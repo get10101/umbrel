@@ -14,7 +14,7 @@ services:
       - --maker=mainnet.itchysats.network:9999
       - --maker-id=69a42aa90da8b065b9532b62bff940a3ba07dbbb11d4482c7db83a7e049a9f1e
       - mainnet
-      - --electrum tcp://$ELECTRUM_IP:$ELECTRUM_PORT
+      - --electrum=tcp://$ELECTRUM_IP:$ELECTRUM_PORT
     
     networks:
       default:
