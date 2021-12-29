@@ -12,9 +12,9 @@ services:
     command:
       - --maker=mainnet.itchysats.network:9999
       - --maker-id=7e35e34801e766a6a29ecb9e22810ea4e3476c2b37bf75882edf94a68b1d9607
+      - --password=$APP_PASSWORD
       - mainnet
       - --electrum=tcp://$ELECTRUM_IP:$ELECTRUM_PORT
-      - --password=$APP_PASSWORD
 
     networks:
       default:
